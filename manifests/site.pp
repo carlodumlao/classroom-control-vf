@@ -58,4 +58,5 @@ node default {
   # This is for Lab 9.3
   #include skeleton
   include memcached
+  inlcude nginx
 }
