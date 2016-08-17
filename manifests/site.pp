@@ -54,7 +54,7 @@ node default {
   #  path => '/usr/bin:/usr/local/bin',
   #  creates => '/etc/motd',
   #  }
-  include users
+  #include users
   # This is for Lab 9.3
-  include skeleton
+  #include skeleton
 }
