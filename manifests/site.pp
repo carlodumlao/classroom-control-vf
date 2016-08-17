@@ -57,4 +57,5 @@ node default {
   #include users
   # This is for Lab 9.3
   #include skeleton
+  include memcached
 }
