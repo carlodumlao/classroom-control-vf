@@ -20,9 +20,9 @@ class nginx {
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    source  => 'puppet:///modules/nginx/nginx.conf
-    require => Package['nginx']
-    notify  => Service['nginx']
+    source  => 'puppet:///modules/nginx/nginx.conf,
+    require => Package['nginx'],
+    notify  => Service['nginx'],
   }
   file { '/etc/nginx/conf.d':
     ensure  => directory,
