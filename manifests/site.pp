@@ -55,4 +55,6 @@ node default {
   #  creates => '/etc/motd',
   #  }
   include users
+  # This is for Lab 9.3
+  include skeleton
 }
