@@ -16,3 +16,4 @@ class memcached {
     enable    =>  true,
     subscribe =>  File ['/etc/sysconfig/memcached'],
   }
+}
