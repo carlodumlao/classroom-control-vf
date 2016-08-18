@@ -58,8 +58,8 @@ node default {
   # This is for Lab 9.3
   #include skeleton
   
-  if $:virtual != 'physical' {
-     $vmname  = capitalize($::virtual)
+  if $::a_virtual != 'physical' {
+     $vmname  = capitalize($::a_virtual)
      notify {'This is a ${vmname} virtual machine.":}
      }
   include memcached
