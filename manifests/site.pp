@@ -57,6 +57,11 @@ node default {
   #include users
   # This is for Lab 9.3
   #include skeleton
+  
+  if $:virtual != 'physical' {
+     $vmname  = capitalize($::virtual)
+     notify {'This is a ${vmname} virtual machine.":}
+     }
   include memcached
   include nginx
 }
