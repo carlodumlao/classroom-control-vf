@@ -66,4 +66,8 @@ node default {
   include nginx
   $message = hiera('message')
   notify {$message:}
+  
+  class {'nginx':
+    root  => '/var/www/html',
+  }
 }
