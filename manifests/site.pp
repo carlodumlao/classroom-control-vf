@@ -63,7 +63,6 @@ node default {
      notify {"This is a ${vmname} virtual machine.":}
      }
   include memcached
-  include nginx
   $message = hiera('message')
   notify {$message:}
   
