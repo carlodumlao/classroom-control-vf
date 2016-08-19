@@ -1,3 +1,3 @@
- class {'nginx':
-    root  => '/var/www/html',
-  }
+node default {
+  include nginx
+}
