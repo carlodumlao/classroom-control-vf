@@ -64,5 +64,6 @@ node default {
      }
   include memcached
   include nginx
-  message: Testing a heira datasource
+  $message = hiera('message')
+  notify {$message:}
 }
