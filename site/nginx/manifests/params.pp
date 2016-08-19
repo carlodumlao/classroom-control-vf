@@ -16,13 +16,14 @@ class nginx::params {
     $confdir  = 'C:/ProgramData/nginx'
     $logdir   = 'C:/ProgramData/nginx/logs'
   }
+}
   default : {
-    fail("Module ${module_name} is not supported on ${::osfamily}")
+    fail("Module ${module_name} is not supported on ${::osfamily}") }
   }
-$user = $::osfamily {
-    'redhat'  => 'nginx',
-    'debian   =>  'www-data',
-    'windows  =>  'nobody',
+    $user = $::osfamily ? {
+    'redhat' => 'nginx', 
+    'debian' => 'www-data', 
+    'windows' => 'nobody',
   }
 }
   
